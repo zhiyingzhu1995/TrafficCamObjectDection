@@ -128,85 +128,88 @@ def main(video_file):
                 # create a dictionary for index and boxes x-component
                 ind_box = {}
 
-                for ind in indexes.flatten():
-                    ind_box[boxes[ind][0]] = ind
+                try:
+                    for ind in indexes.flatten():
+                        ind_box[boxes[ind][0]] = ind
 
-                # sort the box and index by boxes x-components
-                ind_box = dict(sorted(ind_box.items())) # {226: 12} = Box-x: index
+                    # sort the box and index by boxes x-components
+                    ind_box = dict(sorted(ind_box.items())) # {226: 12} = Box-x: index
 
-                x_prior, y_prior, w_prior, h_prior = 0,0,0,0
-                label_prior = ""
-                CI_prior = 0
-                indexes_new = []
-
-
-                for k,i in ind_box.items():
-                    intersection_area = 0
-                    x,y,w,h = boxes[i]
-                    label = str(classes[class_ids[i]])
-                    confidence = str(round(confidences[i],2))
+                    x_prior, y_prior, w_prior, h_prior = 0,0,0,0
+                    label_prior = ""
+                    CI_prior = 0
+                    indexes_new = []
 
 
-                    # calculate the if intersection happens
-                    x_left = max(x, x_prior)
-                    x_right = min(x+w,x_prior+w_prior)
-                    y_bottom = min(y,y_prior)
-                    y_top = max(y+h,y_prior+h_prior)
-
-                    if x_right > x_left or y_bottom > y_top:
-                        intersection_area = abs((x_right - x_left) * (y_bottom - y_top))
+                    for k,i in ind_box.items():
+                        intersection_area = 0
+                        x,y,w,h = boxes[i]
+                        label = str(classes[class_ids[i]])
+                        confidence = str(round(confidences[i],2))
 
 
-                    # change names to biker
-                    if ((label_prior == "person" and label == "bicycle") or (label_prior == "bicycle" and label == "person")) and intersection_area > 0:
-                        # pop the previous detected object
-                        indexes_new.pop()
-                        indexes_new.append(i)
-                        # change the current label to a new label
-                        class_ids[i] = -2        # index -2 is biker
-                        # change the prior label to current new label
-                        label_new = "biker"
-                        # change the boxes
-                        x_new = min(x,x_prior)
-                        y_new = min(y,y_prior)
-                        w_new = max(x+w,x_prior+w_prior)-min(x,x_prior)
-                        h_new = max(y+h,y_prior+h_prior)-min(y,y_prior)
-                        boxes[i] = [x_new,y_new,w_new,h_new]
-                        # change the max CL to max 
-                        confidences[i] = max(CI_prior,round(confidences[i],2))
-                        # set the prior label to the current label
-                        label_prior = label_new
-                        x_prior, y_prior, w_prior, h_prior = x,y,w,h
-                        CI_prior = round(confidences[i],2)
+                        # calculate the if intersection happens
+                        x_left = max(x, x_prior)
+                        x_right = min(x+w,x_prior+w_prior)
+                        y_bottom = min(y,y_prior)
+                        y_top = max(y+h,y_prior+h_prior)
 
-                    # change names to scooter
-                    if ((label_prior == "person" and label == "skateboard") or (label_prior == "skateboard" and label == "person")) and intersection_area > 0:
-                        # pop the previous detected object
-                        indexes_new.pop()
-                        indexes_new.append(i)
-                        # change the current label to a new label
-                        class_ids[i] = -1
-                        # change the prior label to current new label
-                        label_new = "scooter"
-                        # change the boxes
-                        x_new = min(x,x_prior)
-                        y_new = min(y,y_prior)
-                        w_new = max(x+w,x_prior+w_prior)-min(x,x_prior)
-                        h_new = max(y+h,y_prior+h_prior)-min(y,y_prior)
-                        boxes[i] = [x_new,y_new,w_new,h_new]
-                        # change the max CL to max 
-                        confidences[i] = max(CI_prior,round(confidences[i],2))
-                        # set the prior label to the current label
-                        label_prior = label_new
-                        x_prior, y_prior, w_prior, h_prior = x,y,w,h
-                        CI_prior = round(confidences[i],2)
+                        if x_right > x_left or y_bottom > y_top:
+                            intersection_area = abs((x_right - x_left) * (y_bottom - y_top))
 
-                    else:
-                        # set the prior label to the current label
-                        indexes_new.append(i)
-                        label_prior = label
-                        x_prior, y_prior, w_prior, h_prior = x,y,w,h
-                        CI_prior = round(confidences[i],2)
+
+                        # change names to biker
+                        if ((label_prior == "person" and label == "bicycle") or (label_prior == "bicycle" and label == "person")) and intersection_area > 0:
+                            # pop the previous detected object
+                            indexes_new.pop()
+                            indexes_new.append(i)
+                            # change the current label to a new label
+                            class_ids[i] = -2        # index -2 is biker
+                            # change the prior label to current new label
+                            label_new = "biker"
+                            # change the boxes
+                            x_new = min(x,x_prior)
+                            y_new = min(y,y_prior)
+                            w_new = max(x+w,x_prior+w_prior)-min(x,x_prior)
+                            h_new = max(y+h,y_prior+h_prior)-min(y,y_prior)
+                            boxes[i] = [x_new,y_new,w_new,h_new]
+                            # change the max CL to max 
+                            confidences[i] = max(CI_prior,round(confidences[i],2))
+                            # set the prior label to the current label
+                            label_prior = label_new
+                            x_prior, y_prior, w_prior, h_prior = x,y,w,h
+                            CI_prior = round(confidences[i],2)
+
+                        # change names to scooter
+                        if ((label_prior == "person" and label == "skateboard") or (label_prior == "skateboard" and label == "person")) and intersection_area > 0:
+                            # pop the previous detected object
+                            indexes_new.pop()
+                            indexes_new.append(i)
+                            # change the current label to a new label
+                            class_ids[i] = -1
+                            # change the prior label to current new label
+                            label_new = "scooter"
+                            # change the boxes
+                            x_new = min(x,x_prior)
+                            y_new = min(y,y_prior)
+                            w_new = max(x+w,x_prior+w_prior)-min(x,x_prior)
+                            h_new = max(y+h,y_prior+h_prior)-min(y,y_prior)
+                            boxes[i] = [x_new,y_new,w_new,h_new]
+                            # change the max CL to max 
+                            confidences[i] = max(CI_prior,round(confidences[i],2))
+                            # set the prior label to the current label
+                            label_prior = label_new
+                            x_prior, y_prior, w_prior, h_prior = x,y,w,h
+                            CI_prior = round(confidences[i],2)
+
+                        else:
+                            # set the prior label to the current label
+                            indexes_new.append(i)
+                            label_prior = label
+                            x_prior, y_prior, w_prior, h_prior = x,y,w,h
+                            CI_prior = round(confidences[i],2)
+                except:
+                    pass
 
                 if len(indexes) !=0:
                     for i in indexes.flatten():

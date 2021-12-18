@@ -56,4 +56,30 @@ The model performance and evaluation of the customized model are showed in [Tabl
 <img src="https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/0233d5d75b378daac174354171117ff9a4a150d6/Supplement_Images/Final%20Eval%20Results.png" width = "650" height = "400">
 
 
+## References
+[1] 	N. H. T. S. Administration, "Traffic safety facts: 2018 data: Pedestrians," Annals of Emergency Medicine, 2018.
+
+[2] 	N. H. T. S. Administration, "Traffic safety facts: 2015 data: Pedestrians," Annals of Emergency Medicine, 2015.
+
+[3] 	N. H. T. S. Administration, "Traffic safety facts: 2014 data: Pedestrians," Annals of Emergency Medicine, 2014.
+
+[4] 	K. D., "Pedestrian and bicycle volume data collection using drone technology," J Urban Technol, vol. 27(2), pp. 45-60, 2020. 
+
+[5] 	P. P. Hatfield J, "An investigation of behaviour and attitudes relevant to the user safety of pedestrian/cyclist shared paths," Transp Res Part F, pp. 35-47, 2016. 
+
+[6] 	B. A. G. G. Gkekas F, "Perceived safety and experienced incidents between pedestrians and cyclists in a high-volume non-motorized shared space," Transp Res Interdiscip Perspect, 2020. 
+
+[7] 	D. a. K. P. Kim, "Analysis of potential collisions between pedestrians and personal transportation devices in a university campus: an application of unmanned aerial vehicles," Journal of American college health, 2021. 
+
+[8] 	J. &. F. A. Redmon, "Yolov3: An incremental improvement," arXiv preprint arXiv, p. 804.02767. 
+
+[9] 	"OpenCV Library," [Online]. Available: https://opencv.org/. [Accessed 23 09 2021].
+
+[10] 	L. W. e. al, "SSD: Single Shot MultiBox Detector," European conference on computer vision, vol. 1512.02325, pp. pp. 21-37, 2016, October. 
+
+[11] 	P. a. J. M. Viola, "Robust real-time face detection," International journal of computer vision, vol. 57(2), pp. 37-154, 2004. 
+
+[12] 	L. Dinalankara, "Face detection & face recognition using open computer vision classifies," ResearchGate, 2017. 
+
+[13] 	G. &. H. T. Levi, "Age and gender classification using convolutional neural networks," Proceedings of the IEEE conference on computer vision and pattern recognition workshops, pp. 34-42, 2015. 
 

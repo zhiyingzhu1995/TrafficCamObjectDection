@@ -1,7 +1,6 @@
 # TrafficCamObjectDection
 
 [Final Report](https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/c3c067bd3e3723ad827b6141282204b96abf5db5/Report/Capstone%20Final%20Project%20Report_Zhiying_Zhu.pdf)
-[Training Image Files with Label Txt File](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/ESzyHiT3pDpIqp_MqmQsXpABpKwBzPncFAtjJhkT2qIl7g?e=bRtHc2)
 
 [YOLOV3 Weights](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/EcffKRVygq9Eh1uiqdAJKKwBjFYKlgj07mYFqJCNKBYQVg?e=rAylDT) 
 
@@ -14,6 +13,12 @@
 [Customized Model CFG](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/EaZSXapdL_tAjZh2wQG9A3QBLR9TPBocGALzWEKTt2s6qA?e=ffATr9) 
 
 [Customized Model Label](https://ccnymailcuny-my.sharepoint.com/:t:/g/personal/zzhu000_citymail_cuny_edu/EcZeqIcZclBGrVxXw19qmiQBYvBlfes1DOIyybkdpXyOiA?e=Ks6Qft) 
+
+[Training Image Files with Label Txt File](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/ESzyHiT3pDpIqp_MqmQsXpABpKwBzPncFAtjJhkT2qIl7g?e=bRtHc2)
+
+[Testing Biker Image Files with Label Txt File](https://ccnymailcuny-my.sharepoint.com/:f:/g/personal/zzhu000_citymail_cuny_edu/EkENDBiTnihKhk00e1VZq9YBk_dlmmt_fbQT5YE0zgAvSQ?e=TKUDGO)
+
+[Testing Scooter Image Files with Label Txt File](https://ccnymailcuny-my.sharepoint.com/:f:/g/personal/zzhu000_citymail_cuny_edu/EmKcI4zRzLJAs_oMWW2v74YBlOLgKAdbmzLGMCndX9wzTA?e=15dKK2)
 
 *Password for these files: cam*
 

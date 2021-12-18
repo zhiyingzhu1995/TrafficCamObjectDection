@@ -1,5 +1,22 @@
 # TrafficCamObjectDection
 
+[Final Report](https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/c3c067bd3e3723ad827b6141282204b96abf5db5/Report/Capstone%20Final%20Project%20Report_Zhiying_Zhu.pdf)
+[Training Image Files with Label Txt File](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/ESzyHiT3pDpIqp_MqmQsXpABpKwBzPncFAtjJhkT2qIl7g?e=bRtHc2)
+
+[YOLOV3 Weights](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/EcffKRVygq9Eh1uiqdAJKKwBjFYKlgj07mYFqJCNKBYQVg?e=rAylDT) 
+
+[YOLOV3 CFG](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/ER1GUNNitnVNkzQotG55n7ABTxaa4Nysf1rMcpKOUBrj6w?e=zaygl2)
+
+[YOLOV3 Label](https://ccnymailcuny-my.sharepoint.com/:t:/g/personal/zzhu000_citymail_cuny_edu/EfIGqKVAkexEiJdmeJnLwscBL4HBbEkeztW1oRLUUM3cHA?e=WU5kRe) 
+
+[Customized Model Weights](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/Eb-FPcjjHFtDqnjh12ovXGkBUijQbx_OuUe_o_WGlqd39Q?e=PSKNJL) 
+
+[Customized Model CFG](https://ccnymailcuny-my.sharepoint.com/:u:/g/personal/zzhu000_citymail_cuny_edu/EaZSXapdL_tAjZh2wQG9A3QBLR9TPBocGALzWEKTt2s6qA?e=ffATr9) 
+
+[Customized Model Label](https://ccnymailcuny-my.sharepoint.com/:t:/g/personal/zzhu000_citymail_cuny_edu/EcZeqIcZclBGrVxXw19qmiQBYvBlfes1DOIyybkdpXyOiA?e=Ks6Qft) 
+
+*Password for these files: cam*
+
 ## Design:
     I. Data Collection
 To understand the real traffic situation, a camera is replaced to record the 24-hour traffic interactions at Asbury Ave, New Jersey. Each video has a size range from 38GB to 58GB and is about 24 hours long. The position of this camera is very informative since it captures complex road conditions and it records videos both day and night. We specifically pick a location in which the traffic situation is difficult. This will give us more observation of “near misses” collisions and traffic violations. There are risk factors not only during busy hours, but also during night when the light conditions are bad or even during free hours when participants are more likely to violate traffic laws. 24-hour monitoring enables us to catch diverse risk factors and avoid data bias. The position also has relatively busy traffic and a diverse community. This also enhances the quality of our dataset. Python 3.8.3 will be used as the main programming language to perform object recognition and feature extraction.

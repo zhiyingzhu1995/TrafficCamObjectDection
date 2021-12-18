@@ -9,7 +9,7 @@ A cascade model is used to perform the object detection on the raw videos. The c
 and biker). As seen in Figure 1, the cascade model takes a raw video as an input, then it first passes through the YOLO v3 algorithm to detect any non-person labels. If a person label is detected, then the cascade model will expand the image region where the bounding box for the person label is
 detected and feed into the customized model. If the customized model detects any biker or scooter rider, it will then return the biker and scooter rider label accordingly with the detected bounding box and confidence score. If the customized model did not detect any scooter rider or biker, then the cascade model will then use the person label, bounding box, and confidence score obtained from the previous step from the YOLO v3 model. 
     
-![cascade](/Supplement_Images/cascade model.png) 
+![cascade](https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/fd96c376035984cf41e6658eb72efef60d8e5e82/Supplement_Images/cascade%20model.png) 
 
 The YOLO v3 model contained the pre-train weights and neural network configuration files that was trained on the COCO dataset [12]. The YOLO v3 model is capable of detecting 80 different class labels which include these traffic relevant objects such as traffic lights, car, bicycle, person, skateboard, motorbike, bus, train, and truck. However, the YOLO v3 model lacks the scooter rider,biker labels and cannot differentiate between biker, scooter rider, and pedestrian within the person label, which are the essential part of this project. Hence, a customized model was trained to specifically detects scooter rider and biker.
 

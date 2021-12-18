@@ -28,7 +28,10 @@ The model performance and evaluation of the customized model are showed in [Tabl
 
 **Figure 4**: ![Figure 4](https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/0233d5d75b378daac174354171117ff9a4a150d6/Supplement_Images/result%202.png) 
 
-**Figure 4**: ![Table 1](https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/0233d5d75b378daac174354171117ff9a4a150d6/Supplement_Images/Final%20Eval%20Results.png) 
+**Table 1**: 
+
+
+<img src="https://github.com/zhiyingzhu1995/TrafficCamObjectDection/blob/0233d5d75b378daac174354171117ff9a4a150d6/Supplement_Images/Final%20Eval%20Results.png" width = "650" height = "400">
 
 
 
